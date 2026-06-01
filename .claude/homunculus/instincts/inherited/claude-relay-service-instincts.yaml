@@ -1,0 +1,381 @@
+# Instincts generated from https://github.com/lllyyysss77/claude-relay-service
+# Generated: 2026-06-01T05:21:53.937Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: claude-relay-service-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Commit Length
+
+## Action
+
+Write moderate-length commit messages (~62 characters)
+
+## Evidence
+
+- Average commit message length: 62 chars
+- Based on 3 commits
+
+---
+id: claude-relay-service-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: claude-relay-service-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: claude-relay-service-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: claude-relay-service-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: services
+
+---
+id: claude-relay-service-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: claude-relay-service-workflow-feature-or-bugfix-with-test
+trigger: "when doing feature or bugfix with test"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Workflow Feature Or Bugfix With Test
+
+## Action
+
+Follow the feature-or-bugfix-with-test workflow:
+1. Modify or add logic in a service file under src/services/scheduler/
+2. Update or add corresponding test file under tests/
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/services/scheduler/unifiedOpenAIScheduler.js, tests/unifiedOpenAIScheduler.test.js
+
+---
+id: claude-relay-service-instinct-file-naming
+trigger: "When creating a new file or renaming an existing one"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Instinct File Naming
+
+## Action
+
+Use camelCase for file names
+
+## Evidence
+
+- Pattern in namingConventions.files: camelCase
+
+---
+id: claude-relay-service-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Instinct Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: claude-relay-service-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: claude-relay-service-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: claude-relay-service-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: claude-relay-service-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: claude-relay-service-instinct-try-catch-errors
+trigger: "When handling errors in code"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Instinct Try Catch Errors
+
+## Action
+
+Wrap error-prone code in try-catch blocks
+
+## Evidence
+
+- Pattern in errorHandling.style: try-catch
+
+---
+id: claude-relay-service-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Instinct Test Location
+
+## Action
+
+Place test files in the separate 'tests' folder
+
+## Evidence
+
+- Pattern in architecture.testLocation: separate
+- Example: tests/unifiedOpenAIScheduler.test.js
+
+---
+id: claude-relay-service-instinct-test-update-with-feature
+trigger: "When implementing a feature or bugfix in a service file"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Instinct Test Update With Feature
+
+## Action
+
+Add or update the corresponding test file under 'tests/'
+
+## Evidence
+
+- Workflow: feature-or-bugfix-with-test
+- Example: tests/unifiedOpenAIScheduler.test.js
+
+---
+id: claude-relay-service-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Instinct Commit Prefix
+
+## Action
+
+Start the message with a prefix such as 'fix:' or 'chore:'
+
+## Evidence
+
+- Pattern in commits.prefixes: fix, chore
+- Example: fix: respect OpenAI Responses auto protection setting
+
+---
+id: claude-relay-service-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 60 characters
+
+## Evidence
+
+- Pattern in commits.averageLength: 62
+
+---
+id: claude-relay-service-instinct-feature-bugfix-workflow
+trigger: "When adding a new feature or fixing a bug in a scheduler/service"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: lllyyysss77/claude-relay-service
+---
+
+# Claude Relay Service Instinct Feature Bugfix Workflow
+
+## Action
+
+Modify or add logic in a service file under src/services/scheduler/ and update or add the corresponding test file under tests/
+
+## Evidence
+
+- Workflow: feature-or-bugfix-with-test
+- Example: src/services/scheduler/unifiedOpenAIScheduler.js, tests/unifiedOpenAIScheduler.test.js
+
